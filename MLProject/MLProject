@@ -1,0 +1,8 @@
+name: ForestFireArea
+conda_env: conda.yaml
+entry_points:
+  main:
+    parameters:
+      train_data: {type: string, default: "ForestFireArea_preprocessing/train_processed.csv"}
+      test_data: {type: string, default: "ForestFireArea_preprocessing/test_processed.csv"}
+    command: "python modelling.py --train_data {train_data} --test_data {test_data}"
